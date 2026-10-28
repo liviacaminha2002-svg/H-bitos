@@ -3,150 +3,148 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Monitor de Hábitos — Vida pessoal</title>
+<meta name="color-scheme" content="dark">
+<title>Monitor de Hábitos · Vida pessoal</title>
 <style>
-:root{--bg:#101010;--panel:#191919;--line:#333;--red:#ef4444;--text:#f5f5f5;--muted:#aaa}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
-main{max-width:1050px;margin:auto;padding:28px 16px 48px}.hero{border:1px solid #3a2525;background:linear-gradient(135deg,#211616,#171717);border-radius:18px;padding:24px;margin-bottom:18px}
-.kicker{color:#ff7777;font-size:.78rem;font-weight:800;letter-spacing:.14em}.dot{color:var(--red)}h1{font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.1;margin:.4rem 0 1rem}.muted{color:var(--muted)}.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0}
-.toolbar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}.weeknav{display:flex;gap:8px;align-items:center}button,input{font:inherit}button{background:#292929;color:var(--text);border:1px solid #444;border-radius:10px;padding:9px 13px;cursor:pointer}button:hover{border-color:var(--red)}button.primary{background:var(--red);border-color:var(--red);color:#fff;font-weight:700}
-.progressrow{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:18px 0 8px}.bar{height:9px;background:#333;border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;width:0;background:var(--red);transition:width .2s}
-.tablewrap{overflow-x:auto}.tracker{width:100%;border-collapse:collapse;min-width:650px}.tracker th,.tracker td{padding:12px 8px;border-bottom:1px solid #303030;text-align:center}.tracker th{color:var(--muted);font-size:.82rem}.tracker th:first-child,.tracker td:first-child{text-align:left;min-width:210px}.habitname{width:100%;min-width:170px;background:transparent;color:var(--text);border:1px solid transparent;border-radius:7px;padding:7px}.habitname:focus{outline:1px solid var(--red);border-color:var(--red)}.check{appearance:none;width:23px;height:23px;border:1px solid #666;border-radius:7px;cursor:pointer;display:inline-grid;place-items:center;vertical-align:middle}.check:checked{background:var(--red);border-color:var(--red)}.check:checked:after{content:"✓";font-weight:900;color:white}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.small{font-size:.88rem}.notice{border-left:3px solid var(--red);padding:10px 13px;background:#211919;border-radius:0 8px 8px 0}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}.stat{background:#202020;border-radius:12px;padding:14px}.stat strong{font-size:1.5rem;display:block}.stat span{color:var(--muted);font-size:.85rem}
-@media(max-width:560px){main{padding:14px 10px 32px}.hero{padding:18px}.panel{padding:13px}}/* Ajustes para o Notion */
-main {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 8px 8px 16px;
-}
-
-.hero {
-  display: none;
-}
-
-.panel {
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 12px;
-}
-
-.progressrow {
-  margin: 10px 0 6px;
-}
-
-.stats {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 6px;
-}
-
-.stat {
-  padding: 8px;
-}
-
-.stat strong {
-  font-size: 1.15rem;
-}
-
-.tracker th,
-.tracker td {
-  padding: 8px 5px;
-}
-
-/* Ajuste para incorporar no Notion */
-main {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 4px;
-}
-
-.hero {
-  display: none;
-}
-
-.panel {
-  padding: 8px;
-  margin: 4px 0;
-}
-
-.tracker th,
-.tracker td {
-  padding: 5px 4px;
-}
-                                                                                                                }
+:root{color-scheme:dark;--bg:transparent;--panel:#121217;--panel2:#191920;--border:#292930;--white:#f7f7fa;--muted:#a2a2ad;--red:#ff293d;--red2:#d30d26;--glow:0 0 18px rgba(255,41,61,.25);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--white);font-size:15px;line-height:1.5;padding:0;overflow-x:hidden}
+.wrap{width:100%;max-width:1400px;margin:auto;padding:16px 20px 32px}
+.topline{height:3px;background:linear-gradient(90deg,transparent 0,#e40d28 8%,#ff4151 50%,#e40d28 92%,transparent 100%);box-shadow:0 0 16px rgba(255,25,49,.8);border-radius:3px;margin-bottom:20px}
+.brandbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}
+.brand{display:flex;align-items:center;gap:12px}
+.brandmark{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(145deg,#ff3449,#b6001c);box-shadow:0 0 22px rgba(255,32,54,.35);font-size:13px;font-weight:900;letter-spacing:.04em}
+.brandname{font-size:14px;font-weight:800;letter-spacing:.11em}
+.brandmeta{font-size:10px;color:#aaaab4;letter-spacing:.13em;text-transform:uppercase}
+.badge{border:1px solid #8b1928;border-radius:999px;padding:7px 12px;color:#ff6978;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;box-shadow:inset 0 0 10px rgba(255,41,61,.06),0 0 12px rgba(255,41,61,.10)}
+.hero{position:relative;padding:0 0 20px;overflow:hidden}
+.eyebrow{color:#ff4a5b;font-size:11px;letter-spacing:.15em;font-weight:800;text-transform:uppercase;margin:0 0 10px}
+h1{font-size:clamp(28px,4vw,48px);line-height:1.05;letter-spacing:-.045em;margin:0 0 12px;font-weight:850}
+.under{width:48px;height:4px;border-radius:4px;background:var(--red);box-shadow:var(--glow);margin:0 0 12px}
+.subtitle{font-size:clamp(15px,1.8vw,18px);color:#c3c3cd;max-width:100%;margin:0}
+.hero-foot{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
+.tag{border:1px solid #7c1727;border-radius:999px;padding:6px 12px;font-size:12px;color:#f0dfe2;background:rgba(255,41,61,.06)}
+.grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(245px,.85fr);gap:18px;align-items:stretch}
+.card{min-width:0;background:linear-gradient(145deg,rgba(26,26,34,.98),rgba(16,16,21,.98));border:1px solid #34343d;border-radius:14px;padding:20px;box-shadow:0 8px 28px rgba(0,0,0,.22)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;margin-bottom:14px}
+.section-title{font-size:19px;line-height:1.2;font-weight:800;margin:0 0 5px}
+.section-sub{font-size:13px;color:var(--muted);margin:0}
+.week-controls{display:flex;align-items:center;gap:7px}
+.icon-btn,.today-btn,.add-btn,.remove-btn{font:inherit;color:var(--white);background:#202027;border:1px solid #3b3b44;border-radius:8px;cursor:pointer;min-height:44px}
+.icon-btn{width:44px;font-size:21px}
+.today-btn{padding:0 12px;font-size:12px}
+.icon-btn:hover,.today-btn:hover,.add-btn:hover{border-color:var(--red);box-shadow:var(--glow)}
+button:focus-visible,input:focus-visible{outline:3px solid #ff6070;outline-offset:2px}
+.date-label{font-size:12px;color:#d2d2da;text-align:right;white-space:nowrap;margin-top:7px}
+.summary{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:14px 15px;background:#111116;border:1px solid #303039;border-radius:11px;margin-bottom:15px}
+.summary-kicker{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#ff5262;font-weight:800}
+.summary-num{font-size:25px;font-weight:850;line-height:1.2;margin-top:3px}
+.summary-note{font-size:12px;color:#aaaab4}
+.progress-track{height:8px;background:#292930;border-radius:10px;overflow:hidden;margin-top:10px}
+.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#c7001d,#ff3a4d);box-shadow:0 0 12px rgba(255,41,61,.6);transition:width .2s ease}
+.percent{font-size:24px;font-weight:850;color:#ff5666}
+.table-scroll{overflow-x:auto;border:1px solid #33333c;border-radius:10px;scrollbar-color:#5b2630 #15151a}
+.tracker{width:100%;min-width:630px;border-collapse:collapse;text-align:center}
+.tracker th{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#b6b6bf;font-weight:750;padding:11px 6px;border-bottom:1px solid #35353e}
+.tracker th:first-child{text-align:left;padding-left:13px;width:210px}
+.tracker td{padding:7px 5px;border-bottom:1px solid #282830}
+.tracker tr:last-child td{border-bottom:0}
+.habit-cell{display:flex;align-items:center;gap:9px;text-align:left;min-height:44px;padding-left:8px}
+.habit-dot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 9px rgba(255,41,61,.75);flex:none}
+.habit-name{width:100%;min-width:90px;background:transparent;border:0;color:#f4f4f7;font:inherit;font-size:13px;font-weight:650;padding:6px 2px}
+.habit-name::placeholder{color:#8f8f99}
+.day-btn{width:44px;height:44px;border-radius:10px;border:1px solid #36363f;background:#19191f;color:transparent;cursor:pointer;display:inline-grid;place-items:center;font-size:17px;transition:all .15s}
+.day-btn:hover{border-color:#ff4b5e;transform:translateY(-1px)}
+.day-btn[aria-checked="true"]{color:white;background:linear-gradient(145deg,#ff4054,#c80822);border-color:#ff6878;box-shadow:0 0 13px rgba(255,41,61,.34)}
+.day-btn[aria-checked="true"]:before{content:"✓"}
+.table-note{font-size:11px;color:#9696a1;margin:10px 1px 0}
+.habit-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px}
+.add-btn{padding:0 14px;color:#ff6978;border-color:#6c1c28;background:rgba(255,41,61,.07);font-size:12px;font-weight:750}
+.limit-note{font-size:11px;color:#92929d;text-align:right}
+.side{display:flex;flex-direction:column;gap:14px}
+.side .card{height:100%}
+.steps{list-style:none;margin:15px 0 0;padding:0;display:grid;gap:13px}
+.steps li{display:grid;grid-template-columns:29px 1fr;gap:10px;align-items:start}
+.step-num{width:29px;height:29px;border-radius:9px;background:#3b1119;color:#ff5364;display:grid;place-items:center;font-weight:850;box-shadow:inset 0 0 0 1px #7c1d2a}
+.steps strong{display:block;font-size:13px;margin:2px 0 3px}
+.steps span:last-child{display:block;color:#a6a6b0;font-size:12px;line-height:1.45}
+.gentle{border-color:#7b1d2b;box-shadow:inset 0 0 22px rgba(255,41,61,.035),0 8px 28px rgba(0,0,0,.22)}
+.gentle .section-title{display:flex;gap:8px;align-items:center}
+.red-bullet{color:var(--red);text-shadow:0 0 9px rgba(255,41,61,.7)}
+.gentle p{font-size:13px;color:#c4c4cd;margin:10px 0 0}
+.quote-line{margin-top:14px;border-top:1px solid #40232a;padding-top:12px;color:#ff7582;font-size:12px;font-style:italic}
+.footer{margin-top:18px;color:#777782;font-size:11px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.save-note{display:inline-flex;align-items:center;gap:7px}
+.save-dot{width:6px;height:6px;background:#65c98e;border-radius:50%;box-shadow:0 0 7px #65c98e}
+.notice{margin-top:12px;color:#8f8f99;font-size:10px;line-height:1.5}
+@media(max-width:800px){.grid{grid-template-columns:1fr}.side{display:grid;grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.side{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<main>
-  <section class="hero">
-    <div class="kicker"><span class="dot">●</span> SEU ESPAÇO · SEU RITMO</div>
-    <h1>Monitor de Hábitos</h1>
-    <p class="muted">Marque os hábitos realizados, personalize os nomes e navegue entre as semanas. Acompanhe seu progresso sem transformar consistência em cobrança.</p>
+<main class="wrap">
+  <div class="topline" aria-hidden="true"></div>
+  <header class="brandbar">
+    <div class="brand"><div class="brandmark" aria-hidden="true">LC</div><div><div class="brandname">LÍVIA</div><div class="brandmeta">Vida pessoal · no seu ritmo</div></div></div>
+    <div class="badge">Habit tracker</div>
+  </header>
+  <section class="hero" aria-labelledby="title">
+    <p class="eyebrow">Seu espaço · sua semana</p>
+    <h1 id="title">Monitor de Hábitos</h1>
+    <div class="under" aria-hidden="true"></div>
+    <p class="subtitle">Pequenos passos, acompanhados com leveza. Marque o que aconteceu — sem transformar cuidado em cobrança.</p>
+    <div class="hero-foot"><span class="tag">Acompanhamento semanal</span><span class="tag">Recomece quando quiser</span><span class="tag">Um dia de cada vez</span></div>
   </section>
-  <section class="panel">
-    <div class="toolbar">
-      <div><strong id="weekLabel">Semana</strong><div class="muted small" id="dateRange"></div></div>
-      <div class="weeknav"><button id="prev" aria-label="Semana anterior">←</button><button id="today">Esta semana</button><button id="next" aria-label="Próxima semana">→</button></div>
-    </div>
-    <div class="progressrow"><strong>Progresso semanal</strong><strong id="percent">0%</strong></div>
-    <div class="bar"><span id="bar"></span></div>
-    <div class="stats" style="margin-top:16px">
-      <div class="stat"><strong id="doneCount">0</strong><span>marcações feitas</span></div>
-      <div class="stat"><strong id="totalCount">0</strong><span>oportunidades na semana</span></div>
-      <div class="stat"><strong id="bestDay">—</strong><span>melhor dia</span></div>
-    </div>
+  <section class="grid" aria-label="Painel de hábitos">
+    <article class="card">
+      <div class="card-head">
+        <div><h2 class="section-title">Sua semana em foco</h2><p class="section-sub">Escolha hábitos possíveis e acompanhe seu ritmo.</p></div>
+        <div><div class="week-controls"><button class="icon-btn" id="prev" aria-label="Semana anterior">‹</button><button class="today-btn" id="today">Esta semana</button><button class="icon-btn" id="next" aria-label="Próxima semana">›</button></div><div class="date-label" id="range"></div></div>
+      </div>
+      <div class="summary" aria-live="polite">
+        <div><div class="summary-kicker">Consistência da semana</div><div class="summary-num" id="count">0 de 35 marcações</div><div class="summary-note">Sua meta pode ser simplesmente continuar.</div><div class="progress-track" role="progressbar" aria-label="Progresso semanal" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-fill" id="fill"></div></div></div>
+        <div class="percent" id="percent">0%</div>
+      </div>
+      <div class="table-scroll" role="region" aria-label="Tabela semanal de hábitos" tabindex="0"><table class="tracker"><thead><tr><th scope="col">Hábito</th><th scope="col">Seg</th><th scope="col">Ter</th><th scope="col">Qua</th><th scope="col">Qui</th><th scope="col">Sex</th><th scope="col">Sáb</th><th scope="col">Dom</th></tr></thead><tbody id="rows"></tbody></table></div>
+      <p class="table-note">Toque numa caixa para marcar. Edite os nomes dos hábitos diretamente na lista.</p>
+      <div class="habit-actions"><button class="add-btn" id="add">＋ Adicionar hábito</button><span class="limit-note" id="limit">Até 8 hábitos</span></div>
+    </article>
+    <aside class="side">
+      <article class="card">
+        <p class="eyebrow">Como usar</p><h2 class="section-title">Um ritmo que cabe na sua vida</h2>
+        <ol class="steps"><li><span class="step-num">1</span><div><strong>Escolha o que importa</strong><span>Renomeie os hábitos para combinarem com você.</span></div></li><li><span class="step-num">2</span><div><strong>Marque sem julgamento</strong><span>Uma caixa por dia em que você fez aquele hábito.</span></div></li><li><span class="step-num">3</span><div><strong>Revise com gentileza</strong><span>Use a porcentagem como informação, não como nota.</span></div></li></ol>
+      </article>
+      <article class="card gentle"><h2 class="section-title"><span class="red-bullet">●</span> Lembrete gentil</h2><p>Um dia em branco não apaga o que você já construiu. Ajuste a meta, descanse ou recomece — o painel é seu.</p><div class="quote-line">Seu progresso não precisa ser perfeito para ser real.</div></article>
+    </aside>
   </section>
-  <section class="panel">
-    <div class="toolbar"><div><h2 style="margin:0">Seus hábitos</h2><div class="muted small">Edite os nomes diretamente na tabela.</div></div><button class="primary" id="add">+ Adicionar hábito</button></div>
-    <div class="tablewrap" style="margin-top:12px">
-      <table class="tracker" id="tracker"><thead><tr><th>Hábito</th><th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sáb</th><th>Dom</th><th></th></tr></thead><tbody></tbody></table>
-    </div>
-    <div class="actions"><button id="clearWeek">Limpar esta semana</button><button id="export">Exportar dados (.json)</button></div>
-  </section>
-  <section class="panel">
-    <h3 style="margin-top:0">Sobre os registros</h3>
-    <p class="notice small">As marcações ficam salvas neste navegador e neste dispositivo. Elas não sincronizam automaticamente com o Notion nem entre dispositivos. Faça uma exportação de vez em quando para guardar uma cópia.</p>
-    <p class="muted small">Dica: os hábitos iniciais são exemplos — personalize-os para combinar com sua rotina.</p>
-  </section>
+  <footer class="footer"><span class="save-note"><i class="save-dot" aria-hidden="true"></i><span id="saved">Salvando seus registros neste navegador</span></span><span>VIDA PESSOAL · ACOMPANHE SEU PRÓPRIO RITMO</span></footer>
+  <p class="notice">Privacidade: os registros ficam salvos localmente neste navegador.</p>
 </main>
 <script>
-const DAYS=['Seg','Ter','Qua','Qui','Sex','Sáb','Dom'];
-const KEY='monitorHabitosVidaPessoal_v1';
-let data={habits:['Beber água','Estudar','Treinar','Ler'],weeks:{}};
-let weekOffset=0;
-try{const saved=JSON.parse(localStorage.getItem(KEY));if(saved&&Array.isArray(saved.habits)&&saved.weeks)data=saved;}catch(e){}
-function save(){localStorage.setItem(KEY,JSON.stringify(data));}
-function mondayOf(date){const d=new Date(date);d.setHours(0,0,0,0);const day=(d.getDay()+6)%7;d.setDate(d.getDate()-day);return d;}
-function currentMonday(){const d=mondayOf(new Date());d.setDate(d.getDate()+weekOffset*7);return d;}
-function keyForWeek(d){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
-function weekData(){const k=keyForWeek(currentMonday());if(!data.weeks[k])data.weeks[k]={};return data.weeks[k];}
-function fmt(d){return d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'});}
+(()=>{
+const STORAGE='livia-habit-tracker-v1';
+const defaultHabits=[{id:'water',name:'Beber água'},{id:'move',name:'Movimentar o corpo'},{id:'read',name:'Ler ou estudar'},{id:'care',name:'Autocuidado'},{id:'rest',name:'Cuidar do descanso'}];
+let state={habits:defaultHabits,checks:{}};
+try{const saved=JSON.parse(localStorage.getItem(STORAGE)||'null');if(saved&&Array.isArray(saved.habits)&&saved.checks)state=saved;}catch(e){}
+const dateKey=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+const mondayOf=d=>{const x=new Date(d.getFullYear(),d.getMonth(),d.getDate());const day=(x.getDay()+6)%7;x.setDate(x.getDate()-day);return x;};
+const today=new Date();let weekStart=mondayOf(today);
+const weekDates=()=>Array.from({length:7},(_,i)=>{const d=new Date(weekStart);d.setDate(d.getDate()+i);return d;});
+const fmt=new Intl.DateTimeFormat('pt-BR',{day:'2-digit',month:'short'});
+const rows=document.getElementById('rows');
+function persist(){try{localStorage.setItem(STORAGE,JSON.stringify(state));document.getElementById('saved').textContent='Registros salvos neste navegador';}catch(e){document.getElementById('saved').textContent='Não foi possível salvar neste navegador';}}
 function render(){
- const monday=currentMonday(), sunday=new Date(monday);sunday.setDate(monday.getDate()+6);
- document.getElementById('weekLabel').textContent='Semana de '+fmt(monday);
- document.getElementById('dateRange').textContent=fmt(monday)+' – '+fmt(sunday);
- const wd=weekData(), tbody=document.querySelector('#tracker tbody');tbody.innerHTML='';
- let done=0,total=data.habits.length*7,dayCounts=Array(7).fill(0);
- data.habits.forEach((habit,i)=>{
-  const tr=document.createElement('tr'), nameTd=document.createElement('td'), input=document.createElement('input');
-  input.className='habitname';input.value=habit;input.setAttribute('aria-label','Nome do hábito');
-  input.addEventListener('change',()=>{data.habits[i]=input.value.trim()||'Novo hábito';save();render();});nameTd.appendChild(input);tr.appendChild(nameTd);
-  for(let d=0;d<7;d++){const td=document.createElement('td'), cb=document.createElement('input');cb.type='checkbox';cb.className='check';cb.checked=!!(wd[i]&&wd[i][d]);cb.setAttribute('aria-label',`${habit}, ${DAYS[d]}`);
-   if(cb.checked){done++;dayCounts[d]++;}
-   cb.addEventListener('change',()=>{if(!wd[i])wd[i]={};wd[i][d]=cb.checked;save();render();});td.appendChild(cb);tr.appendChild(td);}
-  const delTd=document.createElement('td'), del=document.createElement('button');del.textContent='×';del.title='Excluir hábito';del.setAttribute('aria-label','Excluir hábito');del.style.padding='4px 9px';
-  del.addEventListener('click',()=>{if(confirm('Excluir este hábito e suas marcações?')){data.habits.splice(i,1);const all=Object.values(data.weeks);all.forEach(w=>{delete w[i];const reindexed={};Object.keys(w).forEach(k=>{const n=Number(k);reindexed[n>i?n-1:n]=w[k];});Object.keys(w).forEach(k=>delete w[k]);Object.assign(w,reindexed);});save();render();}});delTd.appendChild(del);tr.appendChild(delTd);tbody.appendChild(tr);
- });
- const pct=total?Math.round(done/total*100):0;document.getElementById('percent').textContent=pct+'%';document.getElementById('bar').style.width=pct+'%';document.getElementById('doneCount').textContent=done;document.getElementById('totalCount').textContent=total;
- const max=Math.max(0,...dayCounts), idx=dayCounts.indexOf(max);document.getElementById('bestDay').textContent=done?DAYS[idx]:'—';
+ const dates=weekDates();document.getElementById('range').textContent=`${fmt.format(dates[0])} — ${fmt.format(dates[6])}`;
+ const weekKey=dateKey(weekStart);if(!state.checks[weekKey])state.checks[weekKey]={};
+ rows.innerHTML='';let complete=0;const total=state.habits.length*7;
+ state.habits.forEach(h=>{const tr=document.createElement('tr');const first=document.createElement('td');const cell=document.createElement('div');cell.className='habit-cell';const dot=document.createElement('i');dot.className='habit-dot';dot.setAttribute('aria-hidden','true');const input=document.createElement('input');input.className='habit-name';input.value=h.name;input.maxLength=34;input.setAttribute('aria-label','Nome do hábito');input.addEventListener('change',()=>{h.name=input.value.trim()||'Novo hábito';persist();render();});input.addEventListener('keydown',e=>{if(e.key==='Enter')input.blur();});cell.append(dot,input);first.append(cell);tr.append(first);
+ dates.forEach((d,i)=>{const td=document.createElement('td');const b=document.createElement('button');b.type='button';b.className='day-btn';const key=dateKey(d);const checked=!!state.checks[weekKey][h.id]?.includes(key);if(checked)complete++;b.setAttribute('role','checkbox');b.setAttribute('aria-checked',String(checked));b.setAttribute('aria-label',`${checked?'Desmarcar':'Marcar'} ${h.name}, ${new Intl.DateTimeFormat('pt-BR',{weekday:'long',day:'numeric',month:'long'}).format(d)}`);b.addEventListener('click',()=>{const existing=state.checks[weekKey][h.id]||[];state.checks[weekKey][h.id]=existing.includes(key)?existing.filter(x=>x!==key):[...existing,key];persist();render();});td.append(b);tr.append(td);});rows.append(tr);});
+ const pct=total?Math.round(complete/total*100):0;document.getElementById('count').textContent=`${complete} de ${total} marcações`;document.getElementById('percent').textContent=`${pct}%`;document.getElementById('fill').style.width=`${pct}%`;document.querySelector('[role="progressbar"]').setAttribute('aria-valuenow',String(pct));
+ document.getElementById('limit').textContent=state.habits.length>=8?'Limite de 8 hábitos atingido':`Até 8 hábitos · ${state.habits.length} no painel`;document.getElementById('add').disabled=state.habits.length>=8;document.getElementById('add').style.opacity=state.habits.length>=8?'.55':'1';
 }
-document.getElementById('prev').onclick=()=>{weekOffset--;render();};
-document.getElementById('next').onclick=()=>{weekOffset++;render();};
-document.getElementById('today').onclick=()=>{weekOffset=0;render();};
-document.getElementById('add').onclick=()=>{data.habits.push('Novo hábito');save();render();const inputs=document.querySelectorAll('.habitname');inputs[inputs.length-1].focus();};
-document.getElementById('clearWeek').onclick=()=>{if(confirm('Limpar todas as marcações desta semana?')){data.weeks[keyForWeek(currentMonday())]={};save();render();}};
-document.getElementById('export').onclick=()=>{const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='monitor-de-habitos-dados.json';a.click();URL.revokeObjectURL(url);};
+document.getElementById('prev').addEventListener('click',()=>{weekStart.setDate(weekStart.getDate()-7);render();});document.getElementById('next').addEventListener('click',()=>{weekStart.setDate(weekStart.getDate()+7);render();});document.getElementById('today').addEventListener('click',()=>{weekStart=mondayOf(new Date());render();});document.getElementById('add').addEventListener('click',()=>{if(state.habits.length>=8)return;const id=`custom-${Date.now()}`;state.habits.push({id,name:'Meu hábito'});persist();render();const inputs=document.querySelectorAll('.habit-name');inputs[inputs.length-1].focus();inputs[inputs.length-1].select();});
 render();
+})();
 </script>
 </body>
 </html>
