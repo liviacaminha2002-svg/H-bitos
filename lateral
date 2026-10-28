@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Monitor de Hábitos</title>
+<style>
+:root{color-scheme:dark;--bg:transparent;--white:#f7f7fa;--muted:#a2a2ad;--red:#ff293d;font-family:Inter,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--white);padding:10px;font-size:13px}
+.dashboard{display:grid;grid-template-columns:1fr;gap:12px;max-width:1000px;margin:auto}
+.card{background:linear-gradient(145deg,rgba(26,26,34,.98),rgba(16,16,21,.98));border:1px solid #34343d;border-radius:12px;padding:16px;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.topline{height:2px;background:linear-gradient(90deg,transparent,#ff4151,transparent);margin-bottom:10px}
+.brandbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.brand{display:flex;align-items:center;gap:8px}
+.brandmark{width:32px;height:32px;display:grid;place-items:center;border-radius:8px;background:linear-gradient(145deg,#ff3449,#b6001c);font-size:11px;font-weight:900}
+.brandname{font-size:12px;font-weight:800;letter-spacing:.1em}
+.badge{border:1px solid #8b1928;border-radius:999px;padding:3px 8px;color:#ff6978;font-size:8px;font-weight:800;text-transform:uppercase}
+.eyebrow{color:#ff4a5b;font-size:9px;letter-spacing:.12em;font-weight:800;text-transform:uppercase;margin-bottom:4px}
+h1{font-size:22px;margin:0 0 4px;font-weight:850}
+.under{width:28px;height:3px;border-radius:3px;background:var(--red);margin-bottom:6px}
+.subtitle{font-size:11px;color:#c3c3cd;margin:0}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:8px}
+.section-title{font-size:14px;font-weight:800;margin:0 0 2px}
+.section-sub{font-size:11px;color:var(--muted);margin:0}
+.week-controls{display:flex;align-items:center;gap:4px}
+.icon-btn,.today-btn,.add-btn{font:inherit;color:var(--white);background:#202027;border:1px solid #3b3b44;border-radius:6px;cursor:pointer;height:30px}
+.icon-btn{width:30px;font-size:14px}
+.today-btn{padding:0 8px;font-size:10px}
+.date-label{font-size:10px;color:#d2d2da;text-align:right;margin-top:2px}
+.summary{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding:8px 10px;background:#111116;border:1px solid #303039;border-radius:8px;margin-bottom:8px}
+.summary-kicker{font-size:
