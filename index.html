@@ -12,7 +12,49 @@ main{max-width:1050px;margin:auto;padding:28px 16px 48px}.hero{border:1px solid 
 .toolbar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}.weeknav{display:flex;gap:8px;align-items:center}button,input{font:inherit}button{background:#292929;color:var(--text);border:1px solid #444;border-radius:10px;padding:9px 13px;cursor:pointer}button:hover{border-color:var(--red)}button.primary{background:var(--red);border-color:var(--red);color:#fff;font-weight:700}
 .progressrow{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:18px 0 8px}.bar{height:9px;background:#333;border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;width:0;background:var(--red);transition:width .2s}
 .tablewrap{overflow-x:auto}.tracker{width:100%;border-collapse:collapse;min-width:650px}.tracker th,.tracker td{padding:12px 8px;border-bottom:1px solid #303030;text-align:center}.tracker th{color:var(--muted);font-size:.82rem}.tracker th:first-child,.tracker td:first-child{text-align:left;min-width:210px}.habitname{width:100%;min-width:170px;background:transparent;color:var(--text);border:1px solid transparent;border-radius:7px;padding:7px}.habitname:focus{outline:1px solid var(--red);border-color:var(--red)}.check{appearance:none;width:23px;height:23px;border:1px solid #666;border-radius:7px;cursor:pointer;display:inline-grid;place-items:center;vertical-align:middle}.check:checked{background:var(--red);border-color:var(--red)}.check:checked:after{content:"✓";font-weight:900;color:white}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.small{font-size:.88rem}.notice{border-left:3px solid var(--red);padding:10px 13px;background:#211919;border-radius:0 8px 8px 0}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}.stat{background:#202020;border-radius:12px;padding:14px}.stat strong{font-size:1.5rem;display:block}.stat span{color:var(--muted);font-size:.85rem}
-@media(max-width:560px){main{padding:14px 10px 32px}.hero{padding:18px}.panel{padding:13px}}
+@media(max-width:560px){main{padding:14px 10px 32px}.hero{padding:18px}.panel{padding:13px}}/* Ajustes para o Notion */
+main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 8px 8px 16px;
+}
+
+.hero {
+  display: none;
+}
+
+.panel {
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 12px;
+}
+
+.progressrow {
+  margin: 10px 0 6px;
+}
+
+.stats {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.stat {
+  padding: 8px;
+}
+
+.stat strong {
+  font-size: 1.15rem;
+}
+
+.tracker th,
+.tracker td {
+  padding: 8px 5px;
+}
+
+.panel:last-child {
+  display: none;
+                                                                                                                }
 </style>
 </head>
 <body>
